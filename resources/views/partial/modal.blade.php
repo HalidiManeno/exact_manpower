@@ -73,7 +73,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
+            </div>https://github.com/HalidiManeno/exact
             <div class="modal-body">
                 <div class="card card-primary">
                     <form id=" " enctype="multipart/form-data" action="/add-users" method="post">
