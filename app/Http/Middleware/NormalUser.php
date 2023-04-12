@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NormalUser
 {
@@ -17,12 +18,14 @@ class NormalUser
     public function handle(Request $request, Closure $next)
     {
         if (!Auth::check()) {
+       
             return redirect()->route('/');
         }
         $role=Auth::user()->role_name;
 
 
-        if ($role=="normal") {
+        if ($role=="User") {
+        
             return $next($request);
         }
         if ($role == "Admin") {

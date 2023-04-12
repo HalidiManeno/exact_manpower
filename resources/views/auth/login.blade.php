@@ -50,7 +50,18 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="row mb-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                     
+                                   <a href="register">    <label >
+                                    {{ __('if not have account create Account here') }}
+                                </label></a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                     
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

@@ -82,7 +82,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="dashboard" class="nav-link active">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -107,12 +107,13 @@
             <a href="manage-user" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                manage users
+                Manage users
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
            
           </li> 
+        
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -127,7 +128,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard </h1>
+            <h1 class="m-0 text-dark"> Users </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -142,53 +143,14 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <!-- Info boxes -->
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-6">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">user</span>
-                <span class="info-box-number"> 
-            
-                </span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-        
-          <!-- /.col -->
-
-          
-
-       
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-6">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">date</span>
-                <span class="info-box-number">{{ Auth::user()->reated_at }}</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
+      <div class="container-fluid"> 
         <section class="content">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                          <h3 class="card-title"> My Information</h3>
+                          <h3 class="card-title">  User Infomation</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -205,7 +167,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach (App\Models\PersonDetail::where('user_id',Auth::user()->id)->get() as $user_data)
+                            @foreach ($users as $user_data)
                               <tr>
                                 <td>{{ $user_data->first_name }}</td>
                                 <td>{{ $user_data->last_name }}</td>

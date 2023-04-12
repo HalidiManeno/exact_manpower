@@ -25,10 +25,14 @@ class RedirectIfAuthenticated
             if (Auth::guard($guard)->check()) {
                 $role=Auth::user()->role_name;
                 switch ($role) {
-                    case 'Admin':
-                        return redirect(RouteServiceProvider::HOME);
+                    case 'Admin': 
+                       
+                //         return  redirect(route('dashboard'));
+              
+                        return redirect(RouteServiceProvider::Admin);
                         break;
                     case 'User':
+                        // return  redirect(route('normaluser'));
                         return redirect(RouteServiceProvider::NormalUser);
                         break;
                     default:
@@ -41,3 +45,4 @@ class RedirectIfAuthenticated
         return $next($request);
     }
 }
+ 
